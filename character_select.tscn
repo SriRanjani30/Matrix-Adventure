@@ -1,0 +1,105 @@
+[gd_scene load_steps=8 format=3 uid="uid://hmxngb8o5tjh"]
+
+[ext_resource type="Script" uid="uid://di4e7eipc21gp" path="res://CharacterSelect.gd" id="1_tddig"]
+[ext_resource type="Texture2D" uid="uid://2qg23rcp4mn3" path="res://Background.jpg" id="2_7yigr"]
+[ext_resource type="FontFile" uid="uid://5ek6bs02ucuk" path="res://PressStart2P-Regular.ttf" id="3_aoibv"]
+[ext_resource type="Texture2D" uid="uid://c0emcvj5vxljm" path="res://assets/Girl/idle_0.png" id="4_mn8d4"]
+[ext_resource type="Texture2D" uid="uid://bqupacilghhyt" path="res://assets/Boy/idle_0.png" id="5_7yigr"]
+[ext_resource type="Texture2D" uid="uid://cuagsur25jd30" path="res://assets/Robot/idle_0.png" id="6_4hbjg"]
+
+[sub_resource type="Theme" id="Theme_aoibv"]
+Label/colors/font_color = Color(0.134551, 0.497026, 0.873593, 1)
+Label/colors/font_outline_color = Color(0, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 1, 1, 1)
+
+[node name="CharacterSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 37.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tddig")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -41.0
+offset_right = 1314.0
+offset_bottom = 608.0
+texture = ExtResource("2_7yigr")
+expand_mode = 1
+
+[node name="GameTitle" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 92.0
+offset_right = 760.0
+offset_bottom = 122.0
+scale = Vector2(1.62429, 3.22481)
+theme = SubResource("Theme_aoibv")
+theme_override_fonts/font = ExtResource("3_aoibv")
+theme_override_font_sizes/font_size = 20
+text = "Matix Adventure"
+
+[node name="Girl" type="Button" parent="."]
+layout_mode = 2
+offset_left = 269.0
+offset_top = 450.0
+offset_right = 467.0
+offset_bottom = 489.0
+text = "Play as Kiara."
+
+[node name="GirlPreview" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(200, 250)
+layout_mode = 2
+offset_left = 270.0
+offset_top = 160.0
+offset_right = 470.0
+offset_bottom = 410.0
+texture = ExtResource("4_mn8d4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Boy" type="Button" parent="."]
+layout_mode = 2
+offset_left = 538.0
+offset_top = 445.0
+offset_right = 713.0
+offset_bottom = 486.0
+text = "Play as Aarav."
+
+[node name="BoyPreview" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(200, 250)
+layout_mode = 2
+offset_left = 533.0
+offset_top = 159.0
+offset_right = 733.0
+offset_bottom = 409.0
+texture = ExtResource("5_7yigr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Robot" type="Button" parent="."]
+layout_mode = 2
+offset_left = 826.0
+offset_top = 438.0
+offset_right = 994.0
+offset_bottom = 484.0
+text = "Play as Superbot."
+
+[node name="RobotPreview" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 815.0
+offset_top = 162.0
+offset_right = 985.0
+offset_bottom = 412.0
+texture = ExtResource("6_4hbjg")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="pressed" from="Girl" to="." method="_on_button_girl_pressed"]
+[connection signal="pressed" from="Boy" to="." method="_on_button_boy_pressed"]
+[connection signal="pressed" from="Robot" to="." method="_on_button_robot_pressed"]

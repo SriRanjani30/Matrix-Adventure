@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsf0s2ygw3t4l"]
+
+[ext_resource type="Texture2D" uid="uid://b0lafopy4al42" path="res://assets/Tileset/Tile2.png" id="1_aysw5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, 9.53674e-07)
+scale = Vector2(1.71875, 2.05882)
+texture = ExtResource("1_aysw5")
