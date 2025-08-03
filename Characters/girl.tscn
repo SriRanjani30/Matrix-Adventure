@@ -45,7 +45,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rik2c"]
-size = Vector2(81, 150)
+size = Vector2(49, 150)
 
 [node name="Girl" type="CharacterBody2D"]
 script = ExtResource("1_p1fft")
