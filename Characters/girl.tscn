@@ -47,9 +47,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rik2c"]
 size = Vector2(49, 150)
 
-[node name="Girl" type="CharacterBody2D"]
+[node name="Girl" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_p1fft")
-speed = 300
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.404, 0.330396)
