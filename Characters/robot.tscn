@@ -45,17 +45,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydsf0"]
-size = Vector2(84, 133)
+size = Vector2(74, 136.5)
 
 [node name="Robot" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_paw6f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.361902, 0.348696)
+scale = Vector2(0.404, 0.389)
 sprite_frames = SubResource("SpriteFrames_20614")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 1.75)
 shape = SubResource("RectangleShape2D_ydsf0")
 
 [node name="Camera2D" type="Camera2D" parent="."]

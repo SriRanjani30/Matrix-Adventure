@@ -44,17 +44,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nmbk5"]
-size = Vector2(80, 121)
+size = Vector2(67, 145)
 
 [node name="Boy" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_jdclr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.343626, 0.320086)
+scale = Vector2(0.404, 0.376)
 sprite_frames = SubResource("SpriteFrames_d168x")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_nmbk5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
