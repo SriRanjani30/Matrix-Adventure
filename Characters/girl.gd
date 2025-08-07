@@ -47,3 +47,15 @@ func _physics_process(delta):
 	# Jump if on floor and input is pressed
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		velocity.y = jump_velocity
+
+var health := 5
+
+func take_damage(amount: int):
+	health -= amount
+	print("Player Health:", health)
+	if health <= 0:
+		die()
+
+func die():
+	print("Player has died")
+	queue_free()  # or trigger game over

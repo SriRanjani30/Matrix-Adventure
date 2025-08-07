@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4d1e62nem1i1"]
+[gd_scene load_steps=4 format=3 uid="uid://c4d1e62nem1i1"]
 
 [ext_resource type="Script" uid="uid://bubkc5dlowf26" path="res://enemy.gd" id="1_7k104"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4gyqm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k104"]
+size = Vector2(560, 150)
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_7k104")
@@ -15,6 +18,8 @@ sprite_frames = SubResource("SpriteFrames_4gyqm")
 [node name="AttackArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(270, 65)
+shape = SubResource("RectangleShape2D_7k104")
 
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
