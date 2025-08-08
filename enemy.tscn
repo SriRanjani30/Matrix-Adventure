@@ -1,24 +1,82 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4d1e62nem1i1"]
+[gd_scene load_steps=14 format=3 uid="uid://c4d1e62nem1i1"]
 
 [ext_resource type="Script" uid="uid://bubkc5dlowf26" path="res://enemy.gd" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://cy8ycofw10a6l" path="res://assets/Ninja/idle_0.png" id="2_3yqyl"]
+[ext_resource type="Texture2D" uid="uid://bbb0nf6k1550f" path="res://assets/Ninja/attack_0.png" id="2_dxifv"]
+[ext_resource type="Texture2D" uid="uid://ceoctyqx0fe4j" path="res://assets/Ninja/attack_1.png" id="3_pwjut"]
+[ext_resource type="Texture2D" uid="uid://c0ab7585drrot" path="res://assets/Ninja/run_0.png" id="3_wujgv"]
+[ext_resource type="Texture2D" uid="uid://dkkywht67nebu" path="res://assets/Ninja/run_1.png" id="4_hb8ge"]
+[ext_resource type="Texture2D" uid="uid://csjtppehwi0j0" path="res://assets/Ninja/attack_2.png" id="4_n0g06"]
+[ext_resource type="Texture2D" uid="uid://cpgi782w18w21" path="res://assets/Ninja/attack_3.png" id="5_ar8e5"]
+[ext_resource type="Texture2D" uid="uid://bpvnhdp8722ui" path="res://assets/Ninja/run_2.png" id="5_e1ltt"]
+[ext_resource type="Texture2D" uid="uid://0mj8i0nyqfeo" path="res://assets/Ninja/run_3.png" id="6_dxifv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4gyqm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dxifv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pwjut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n0g06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ar8e5")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3yqyl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wujgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hb8ge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_e1ltt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dxifv")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pwjut"]
+size = Vector2(95, 141)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k104"]
-size = Vector2(560, 150)
+size = Vector2(136, 155)
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_7k104")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_4gyqm")
+animation = &"attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pwjut")
 
 [node name="AttackArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(270, 65)
+position = Vector2(1, -3.5)
 shape = SubResource("RectangleShape2D_7k104")
 
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]

@@ -498,7 +498,7 @@ script = ExtResource("14_vivmo")
 enemy_scene = ExtResource("15_2cqfq")
 
 [node name="SpawnPointE1" type="Marker2D" parent="EnemySpawns"]
-position = Vector2(1159, 423)
+position = Vector2(1614, 615)
 
 [node name="SpawnPointE2" type="Marker2D" parent="EnemySpawns"]
-position = Vector2(878, 390)
+position = Vector2(914, 477)
