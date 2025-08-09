@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0u00xnsep0o4"
-path="res://.godot/imported/run2.png-07ca3aa2b8eb4c24fb62dd5304813bde.ctex"
+uid="uid://s08dgr8topy2"
+path="res://.godot/imported/Matrix Adventure.icon.png-b9b846d8570c190241c9f4270f48af42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ninja/run2.png"
-dest_files=["res://.godot/imported/run2.png-07ca3aa2b8eb4c24fb62dd5304813bde.ctex"]
+source_file="res://Matrix Adventure.icon.png"
+dest_files=["res://.godot/imported/Matrix Adventure.icon.png-b9b846d8570c190241c9f4270f48af42.ctex"]
 
 [params]
 

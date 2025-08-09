@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://gwuebwm1hi6u"]
+
+[ext_resource type="Script" uid="uid://bls714d6odhj2" path="res://hud.gd" id="1_efote"]
+[ext_resource type="Texture2D" uid="uid://fspw8f0bit7u" path="res://assets/Healthbar/Healthbar_5.png" id="1_k5de2"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_efote")
+
+[node name="Healthbar" type="TextureRect" parent="."]
+offset_right = 132.0
+offset_bottom = 40.0
+texture = ExtResource("1_k5de2")
+expand_mode = 1
+stretch_mode = 5

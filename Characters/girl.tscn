@@ -45,7 +45,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rik2c"]
-size = Vector2(49, 150)
+size = Vector2(55, 146)
 
 [node name="Girl" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_p1fft")
@@ -56,7 +56,7 @@ sprite_frames = SubResource("SpriteFrames_d5ity")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5.5, 0)
+position = Vector2(2.5, 0)
 shape = SubResource("RectangleShape2D_rik2c")
 
 [node name="Camera2D" type="Camera2D" parent="."]

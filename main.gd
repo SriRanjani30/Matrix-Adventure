@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var hud = $GameManager/HUD
 @onready var spawn_point = $SpawnPoint
 
 func _ready():
@@ -13,8 +14,9 @@ func _ready():
 		"robot":
 			scene_path = "res://Characters/robot.tscn"
 
-	if scene_path != "":
-		var character_scene = load(scene_path)
-		var character_instance = character_scene.instantiate()
-		character_instance.position = spawn_point.position
-		add_child(character_instance)
+	var player = load(scene_path).instantiate()
+	add_child(player)
+	player.global_position = spawn_point.global_position
+
+	# Give the player a reference to the HUD
+	player.hud = hud

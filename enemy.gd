@@ -68,6 +68,5 @@ func attack_player():
 		await get_tree().create_timer(attack_cooldown).timeout
 		can_attack = true
 
-		# If still close after cooldown, attack again
 		if player_in_range:
 			attack_player()

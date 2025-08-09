@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcr6ykdy6agjq"]
+
+[ext_resource type="FontFile" uid="uid://5ek6bs02ucuk" path="res://PressStart2P-Regular.ttf" id="1_wao2c"]
+
+[sub_resource type="Theme" id="Theme_wao2c"]
+default_font = ExtResource("1_wao2c")
+default_font_size = 0
+
+[node name="win" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_wao2c")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 222.0
+offset_right = 998.0
+offset_bottom = 422.0
+theme_override_fonts/font = ExtResource("1_wao2c")
+theme_override_font_sizes/font_size = 50
+text = "YOU WON THE GAME!"
+horizontal_alignment = 1
+vertical_alignment = 1

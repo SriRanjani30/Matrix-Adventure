@@ -1,13 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://drdnmjp3p06hb"]
+[gd_scene load_steps=6 format=3 uid="uid://drdnmjp3p06hb"]
 
+[ext_resource type="Script" uid="uid://wqahdkk8fq87" path="res://artifact_1.gd" id="1_mpex4"]
 [ext_resource type="Texture2D" uid="uid://cyqdvy4r0il8y" path="res://assets/Artifacts/Artifact1.png" id="1_tumye"]
+
+[sub_resource type="Theme" id="Theme_d3ia8"]
+
+[sub_resource type="PackedScene" id="PackedScene_mpex4"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("Control", "layout_mode", "anchors_preset", "Label", "anchor_right", "anchor_bottom", "offset_left", "offset_top", "offset_right", "offset_bottom", "grow_horizontal", "grow_vertical", "theme", "theme_override_colors/font_color", "theme_override_colors/font_shadow_color", "theme_override_font_sizes/font_size", "text", "horizontal_alignment", "vertical_alignment"),
+"node_count": 2,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 0, 0, -1, 2, 1, 0, 2, 1, 0, 0, 0, 3, 3, -1, 17, 1, 2, 2, 3, 4, 4, 5, 4, 6, 5, 7, 6, 8, 7, 9, 8, 10, 9, 11, 9, 12, 10, 13, 11, 14, 11, 15, 12, 16, 13, 17, 2, 18, 2, 0),
+"variants": [3, 0, 1, 15, 1.0, 106.0, 269.0, 851.0, 346.0, 2, SubResource("Theme_d3ia8"), Color(0, 0, 0, 1), 50, "You won the game
+"],
+"version": 3
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mpex4"]
 size = Vector2(71, 87.75)
 
-[node name="Node2D" type="Area2D"]
+[node name="Artifact" type="Area2D"]
+script = ExtResource("1_mpex4")
+win_screen_scene = SubResource("PackedScene_mpex4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 10
 scale = Vector2(0.192513, 0.195991)
 texture = ExtResource("1_tumye")
 
