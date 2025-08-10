@@ -9,3 +9,5 @@ Features:
 
 My journey towards this game:
 I have struggled a bit initially especially with the editor interface of Godot but I managed to learn the tweaks and it become fun to develop my game. My favourite part is the character selection option. There are a lot of ups and downs but developing this game was fun!
+
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
